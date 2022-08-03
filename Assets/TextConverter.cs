@@ -30,13 +30,18 @@ public class TextConverter : MonoBehaviour
         for (int i = 0; i < textArray.Length; i++)
         {
             
-            foreach (var VARIABLE in textArray[i].ToUpper())
+            foreach (var textLetter in textArray[i].ToUpper())
             {
-                var letter = Instantiate(placeholder,letterBlank.transform);
-                
-                //letter.GetComponent<Image>().sprite = ;
+                var character = textLetter;
+                foreach (var VARIABLE in List.Chars)
+                {
+                    if (character == VARIABLE.Letter)
+                    {
+                        var letter = Instantiate(placeholder,letterBlank.transform);
+                        letter.GetComponent<Image>().sprite = VARIABLE.Rune;
+                    }
+                }
             }
-            
         }
     }
 }
