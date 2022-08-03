@@ -339,6 +339,8 @@ MonoBehaviour:
   List: {fileID: 1908136094}
   placeholder: {fileID: 121746566642510526, guid: d3a69661e74813a4cbc23acdcc923463, type: 3}
   letterBlank: {fileID: 1748609345}
+  path: 
+  blankSprite: {fileID: 11400000, guid: 9c6269b92a97f2f499f0477466dbd93f, type: 2}
 --- !u!4 &1682284814
 Transform:
   m_ObjectHideFlags: 0

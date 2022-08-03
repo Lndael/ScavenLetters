@@ -16,10 +16,11 @@ public class TextConverter : MonoBehaviour
     public GameObject letterBlank;
     public String path;
     private string[] textArray;
+    public SpriteSet blankSprite;
     
     void Start()
     {
-        path = "/Source.txt";
+        path = Application.dataPath + "/Source.txt";
         textArray = File.ReadAllLines(path);
         fill();
     }
@@ -42,6 +43,8 @@ public class TextConverter : MonoBehaviour
                     }
                 }
             }
+            var blankPlaceholder = Instantiate(placeholder,letterBlank.transform);
+            blankPlaceholder.GetComponent<Image>().sprite = blankSprite.Rune;
         }
     }
 }
